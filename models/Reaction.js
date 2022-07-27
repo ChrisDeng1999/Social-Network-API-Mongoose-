@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, Types } = require('mongoose');
 
 // Schema to create a course model
 const reactionSchema = new Schema(
@@ -28,8 +28,7 @@ const reactionSchema = new Schema(
         },
         id: false,
     }
-    );
+);
     
-    const Reaction = model('reaction', reactionSchema);
     
-    module.exports = Reaction;
+module.exports = reactionSchema;
