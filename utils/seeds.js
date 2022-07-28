@@ -13,11 +13,8 @@ connection.once('open', async () => {
   // Drop existing Thoughts
   await Thought.deleteMany({});
 
-  // Create empty array to hold the Thoughts
-  const thoughts = [];
 
   // Log out the seed data to indicate what should appear in the database
-  console.table(thoughts);
   console.info('Seeding complete! 🌱');
   process.exit(0);
 });

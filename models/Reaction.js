@@ -1,4 +1,5 @@
 const { Schema, Types } = require('mongoose');
+const formatDate = require("../utils/format.date.js");
 
 // Schema to create a course model
 const reactionSchema = new Schema(
@@ -19,7 +20,7 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (timestamp) => timestamp  
+            get: (timestamp) => formatDate(timestamp)  
         },
     },
     {
